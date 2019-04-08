@@ -1,0 +1,24 @@
+<html lang="en-us"><head>
+<title>List Of All UserTypes</title>
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+
+<body >
+<!-- Container -->
+<div align="center">
+<ul>
+<h1>List of UserTypes</h1>
+{% for user in usertypes %}
+<a href="{% url 'update_usertype' user.id%}">
+<li>{{user.name}}
+</li><br>
+</a>
+{% endfor %}
+</ul>
+<br>
+<a href="{% url 'create_usertype'%}">Add New User</a>
+</div>
+</body>
+</html>
